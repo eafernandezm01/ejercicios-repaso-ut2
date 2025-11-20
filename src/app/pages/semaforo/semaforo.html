@@ -1,0 +1,26 @@
+<div class="row justify-content-center p-4 bg-light">
+  <div class="col-12">
+    <h4>ENUNCIADO</h4>
+    <p>
+      Crea una página que pinte un semáforo (3 divs con forma redonda, de color gris) y tres botones
+      (rojo, amarillo, verde), cuando se pulse el rojo se debe mostrar el primer div en rojo y así
+      sucesivamente.
+    </p>
+
+    <h4>SOLUCIÓN</h4>
+
+    <div class="semaforo mt-2" [class]="{ 'bg-danger': rojoActivo }"></div>
+    <div class="semaforo mt-2" [class]="{ 'bg-warning': amarilloActivo }"></div>
+    <div class="semaforo mt-2" [class]="{ 'bg-success': verdeActivo }"></div>
+
+    <!-- en el click puedo poner una función para establecer el false o true pero como es una línea se ve bien asi -->
+    <div class="pt-4">
+      <button type="button" class="btn btn-danger" (click)="activaColor('R')">ROJO</button>
+      <button type="button" class="btn btn-warning ms-2" (click)="activaColor('A')">
+        AMARILLO
+      </button>
+      <button type="button" class="btn btn-success ms-2" (click)="activaColor('V')">VERDE</button>
+      <button type="button" class="btn btn-secondary ms-2" (click)="desactivaTodos()">APAGAR SEMÁFORO</button>
+    </div>
+  </div>
+</div>

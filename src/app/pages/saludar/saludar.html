@@ -1,0 +1,30 @@
+<div class="row justify-content-center p-4 bg-light">
+  <div class="col-12">
+    <h4>ENUNCIADO</h4>
+    <p>Crea una página que contenga:</p>
+    <ul>
+      <li>botón saludar que al pinchar sobre él se muestre un saludo y la fecha actual.</li>
+      <li>
+        botón adiós que al pinchar sobre él muestre un mensaje de despedida quitando el mensaje que
+        hubiera previamente.
+      </li>
+    </ul>
+    <p>Para ocultar/mostrar mensaje usa una directiva de control de flujo.</p>
+
+    <h4>SOLUCIÓN</h4>
+
+    @if (saludar) {
+    <p>Hola, Eva. ¿Qué tal estás? Hoy es {{ getHoy() }}</p>
+    } @else {
+    <p>¡Hasta la próxima!</p>
+    }
+    
+
+
+    <!-- en el click puedo poner una función para establecer el false o true pero como es una línea se ve bien asi -->
+    <div>
+      <button type="button" class="btn btn-primary" (click)="saludar = true"  [disabled]="saludar === true">SALUDAR</button>
+      <button type="button" class="btn btn-secondary ms-2" (click)="saludar = false" [disabled]="saludar === false">ADIÓS</button>
+    </div>
+  </div>
+</div>

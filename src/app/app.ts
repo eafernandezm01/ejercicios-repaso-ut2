@@ -1,12 +1,22 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { IMenu } from './interfaces/IMenu';
+import { Menu } from './comun/menu/menu';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Menu],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('ejercicios-repaso-ut2');
+  menu!: IMenu[];
+
+  constructor() {
+    this.menu = [
+      { titulo: 'SALUDAR', ruta: 'saludar' },
+      { titulo: 'SEMÁFORO', ruta: 'semaforo' },
+      { titulo: 'MIS PROFES', ruta: 'misprofes' },
+    ];
+  }
 }

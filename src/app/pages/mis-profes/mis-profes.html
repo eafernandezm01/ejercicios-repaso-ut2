@@ -1,0 +1,24 @@
+<div class="row justify-content-center p-4 bg-light">
+  <div class="col-12">
+    <h4>ENUNCIADO</h4>
+    <p>
+      Crea una página que con una directiva de control de flujo muestre el contenido de un array de
+      profes-módulo (crea una interfaz para establecer la estructura de profes-módulo), tiene que
+      mostrarse una lista ordenada de elementos.
+    </p>
+
+    <h4>SOLUCIÓN</h4>
+    <p>Mis profes de 2º DAM son:</p>
+
+    <ul>
+      @for (dato of misProfes; track dato) {
+      <li>{{ dato.profe }}</li>
+      <ul>
+        @for ( modulo of dato.modulo; track modulo) {
+        <li>{{ modulo }}</li>
+        }
+      </ul>
+      }
+    </ul>
+  </div>
+</div>
