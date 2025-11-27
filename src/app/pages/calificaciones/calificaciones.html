@@ -1,0 +1,37 @@
+<div class="row justify-content-center p-4 bg-light">
+  <div class="col-12">
+    <h4>ENUNCIADO</h4>
+    <p>
+      Crea una página que muestre una nota y un emoji: Feliz o triste según el resultado de una
+      nota. Añade un botón para aumentar y otro para disminuir la calificación. Recuerda debe estar
+      entre 0-10.
+    </p>
+
+    <h4>SOLUCIÓN</h4>
+  </div>
+  <div class="col-10">
+    <div class="row">
+      <div class="col-3">
+        <app-detalle-tarjeta [detalleTarjeta]="objetoTarjeta"></app-detalle-tarjeta>
+      </div>
+      <div class="col-3">
+        <button
+          type="button"
+          class="btn btn-success m-2"
+          [disabled]="calificacion === 10"
+          (click)="actualizaCalificacion(1)"
+        >
+          Subir nota
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger m-2"
+          [disabled]="calificacion === 0"
+          (click)="actualizaCalificacion(-1)"
+        >
+          Bajar nota
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

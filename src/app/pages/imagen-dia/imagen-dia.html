@@ -1,0 +1,19 @@
+<div class="row justify-content-center p-4 bg-light">
+  <div class="col-12">
+    <h4>ENUNCIADO</h4>
+    <p>
+      Crea una página que usando una directiva de control adecuada muestre una imagen distinta para
+      cada día de la semana y el día, si es finde que se muestre el día en verde y el resto en el
+      color que quieras.
+    </p>
+
+    <h4>SOLUCIÓN</h4>
+    <div class="row">
+      @for (dato of diasSemana; track dato.nombre) {
+      <div class="col-3 mt-4">
+        <app-detalle-tarjeta [detalleTarjeta]="getObjetoDetalle(dato)"></app-detalle-tarjeta>
+      </div>
+      }
+    </div>
+  </div>
+</div>

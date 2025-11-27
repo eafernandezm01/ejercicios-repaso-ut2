@@ -1,0 +1,18 @@
+<div class="card">
+  @if (detalleTarjeta.urlImg) {
+  <img [src]="detalleTarjeta.urlImg" [alt]="detalleTarjeta.altImg || ''" />
+  }
+
+  <div class="card-body">
+    <h4 class="card-title" [class]="detalleTarjeta.classCssTitulo">{{ detalleTarjeta.titulo }}</h4>
+    @if (detalleTarjeta.subTitulo) {
+    <h5 class="card-title" [class]="detalleTarjeta.classCssSubTitulo">
+      {{ detalleTarjeta.subTitulo }}
+    </h5>
+    } @if (detalleTarjeta.desc) {
+    <p class="card-text" [class]="detalleTarjeta.classCssDesc">
+      {{ detalleTarjeta.desc }}
+    </p>
+    }
+  </div>
+</div>

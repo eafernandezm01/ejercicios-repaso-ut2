@@ -17,6 +17,8 @@ export class App {
       { titulo: 'SALUDAR', ruta: 'saludar' },
       { titulo: 'SEMÁFORO', ruta: 'semaforo' },
       { titulo: 'MIS PROFES', ruta: 'misprofes' },
+      { titulo: 'IMAGEN x DÍA', ruta: 'imagenDia' },
+      { titulo: 'CALIFICACIONES', ruta: 'calificaciones' },
     ];
   }
 }
