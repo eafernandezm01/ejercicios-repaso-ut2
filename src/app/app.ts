@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { IMenu } from './interfaces/IMenu';
 import { Menu } from './comun/menu/menu';
+import { Header } from "./comun/header/header";
+import { Footer } from "./comun/footer/footer";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Menu],
+  imports: [RouterOutlet, Menu, Header, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

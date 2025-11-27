@@ -14,10 +14,10 @@
   @if (actual) {
   <div class="col-10">
     <div class="row">
-      <div class="col-3">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <app-detalle-tarjeta [detalleTarjeta]="actual"></app-detalle-tarjeta>
       </div>
-      <div class="col-3">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <button type="button" class="btn btn-success m-2" [disabled]="!hayAnterior" (click)="setAnterior()">Anterior</button>
         <button type="button" class="btn btn-danger m-2"  [disabled]="!haySiguiente" (click)="setSiguiente()">Siguiente</button>
       </div>
