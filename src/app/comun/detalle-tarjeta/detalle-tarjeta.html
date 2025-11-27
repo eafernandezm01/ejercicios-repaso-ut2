@@ -2,7 +2,13 @@
   @if (detalleTarjeta.urlImg) {
   <img [src]="detalleTarjeta.urlImg" [alt]="detalleTarjeta.altImg || ''" />
   }
-
+  @if (detalleTarjeta.urlVideo) {
+    <iframe [src]="getURLSeguraVideo(detalleTarjeta.urlVideo)" title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+  }
   <div class="card-body">
     <h4 class="card-title" [class]="detalleTarjeta.classCssTitulo">{{ detalleTarjeta.titulo }}</h4>
     @if (detalleTarjeta.subTitulo) {

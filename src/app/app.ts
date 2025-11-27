@@ -14,11 +14,14 @@ export class App {
 
   constructor() {
     this.menu = [
+      { titulo: 'PERSONAJES', ruta: 'detallepersonaje' },
       { titulo: 'SALUDAR', ruta: 'saludar' },
       { titulo: 'SEMÁFORO', ruta: 'semaforo' },
       { titulo: 'MIS PROFES', ruta: 'misprofes' },
       { titulo: 'IMAGEN x DÍA', ruta: 'imagenDia' },
       { titulo: 'CALIFICACIONES', ruta: 'calificaciones' },
+      { titulo: 'CARRUSEL', ruta: 'carrusel' },
+      { titulo: 'PLAYLIST', ruta: 'playlist' },
     ];
   }
 }

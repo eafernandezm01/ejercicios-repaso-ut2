@@ -13,14 +13,39 @@
     <div class="semaforo mt-2" [class]="{ 'bg-warning': amarilloActivo }"></div>
     <div class="semaforo mt-2" [class]="{ 'bg-success': verdeActivo }"></div>
 
-    <!-- en el click puedo poner una función para establecer el false o true pero como es una línea se ve bien asi -->
     <div class="pt-4">
-      <button type="button" class="btn btn-danger" (click)="activaColor('R')">ROJO</button>
-      <button type="button" class="btn btn-warning ms-2" (click)="activaColor('A')">
+      <button
+        type="button"
+        class="btn btn-danger"
+        [disabled]="rojoActivo"
+        (click)="activaColor('R')"
+      >
+        ROJO
+      </button>
+      <button
+        type="button"
+        class="btn btn-warning ms-2"
+        [disabled]="amarilloActivo"
+        (click)="activaColor('A')"
+      >
         AMARILLO
       </button>
-      <button type="button" class="btn btn-success ms-2" (click)="activaColor('V')">VERDE</button>
-      <button type="button" class="btn btn-secondary ms-2" (click)="desactivaTodos()">APAGAR SEMÁFORO</button>
+      <button
+        type="button"
+        class="btn btn-success ms-2"
+        [disabled]="verdeActivo"
+        (click)="activaColor('V')"
+      >
+        VERDE
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary ms-2"
+        [disabled]="!rojoActivo && !amarilloActivo && !verdeActivo"
+        (click)="desactivaTodos()"
+      >
+        APAGAR SEMÁFORO
+      </button>
     </div>
   </div>
 </div>
